@@ -12,7 +12,6 @@ MAX_ERRORS = [0.5085, 0.2555, 0.0454]
 
 def main():
     """Plot Pure Pursuit lookahead tuning results."""
-
     plt.figure()
 
     plt.plot(

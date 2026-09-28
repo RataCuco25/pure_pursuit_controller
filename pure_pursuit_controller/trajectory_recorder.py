@@ -68,12 +68,18 @@ def main(args=None):
 
     try:
         rclpy.spin(node)
+
     except KeyboardInterrupt:
         pass
+
     finally:
         node.save_trajectory()
-        node.destroy_node()
-        rclpy.shutdown()
+
+        if rclpy.ok():
+            node.destroy_node()
+            rclpy.shutdown()
+        else:
+            node.destroy_node()
 
 
 if __name__ == '__main__':

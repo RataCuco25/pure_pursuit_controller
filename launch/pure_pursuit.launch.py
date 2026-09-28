@@ -10,7 +10,6 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     """Launch Gazebo and the Pure Pursuit controller."""
-
     lookahead_gain = LaunchConfiguration(
         'lookahead_gain'
     )
